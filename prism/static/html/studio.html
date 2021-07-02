@@ -1,0 +1,20 @@
+<div class="prism_block">
+    <div class="editor">
+        <pre>            
+            <code class="language-{self.language}">
+                {self.code_data}
+            </code>
+        </pre>
+    <br>
+
+        Language 
+        <select class={self.language}>
+            % for lang in self.language %
+                <option value="{{lang}}">{{lang}}</option>
+            % endfor %
+        </select>
+
+    <br>
+        <button>Save</button>
+        <button>Cancel</button>
+</div>
