@@ -71,8 +71,9 @@ class PrismXBlock(XBlock):
             context={'self':self}
         ))
 
-        frag.add_css(self.resource_string("static/css/dark.css"))
-        frag.add_javascript(self.resource_string("static/js/src/dark.js"))
+        css_path  = "static/css/{}.css".format(self.theme)
+        frag.add_css(self.resource_string(css_path))
+        frag.add_javascript(self.resource_string("static/js/src/prism.js"))
         frag.initialize_js('PrismXBlock')
         return frag
 
@@ -86,10 +87,11 @@ class PrismXBlock(XBlock):
             context={'self':self}
         ))
 
-        frag.add_css(self.resource_string("static/css/dark.css"))
-        frag.add_javascript(self.resource_string("static/js/src/dark.js"))
-        frag.initialize_js('PrismXBlockStudio')
-        return frag  
+        frag.add_css(self.resource_string("static/plugin/codemirror/lib/codemirror.css"))
+        frag.add_javascript(self.resource_string("static/js/src/studio.js"))
+        frag.add_javascript(self.resource_string("static/plugin/codemirror/lib/codemirror.js"))
+        frag.initialize_js('PrismXBlockEditBlock')
+        return frag
 
     @XBlock.json_handler
     def studio_submit(self, data, suffix=''):
