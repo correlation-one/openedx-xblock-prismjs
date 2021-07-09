@@ -87,9 +87,9 @@ class PrismXBlock(XBlock):
             context={'self':self}
         ))
 
-        frag.add_css(self.resource_string("static/plugin/codemirror/lib/codemirror.css"))
+        frag.add_css(self.resource_string("static/codemirror/codemirror.css"))
         frag.add_javascript(self.resource_string("static/js/src/studio.js"))
-        frag.add_javascript(self.resource_string("static/plugin/codemirror/lib/codemirror.js"))
+        frag.add_javascript(self.resource_string("static/codemirror/codemirror.js"))
         frag.initialize_js('PrismXBlockEditBlock')
         return frag
 
