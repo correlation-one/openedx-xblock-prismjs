@@ -26,7 +26,7 @@ def package_data(pkg, roots):
 setup(
     name='prism-xblock',
     version='0.1',
-    author='Esther Suh, Appsembler'
+    author='Esther Suh, Appsembler',
     description=('Open EdX XBlock for syntax highlight via Prism JS'),
     packages=[
         'prism',
