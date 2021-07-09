@@ -4,8 +4,8 @@
         <li class="field comp-setting-entry is-set">
         <div class="wrapper-comp-setting">
             <label class="label setting-label" 
-                for="{{self.display_name}}">Display Name</label>
-            <input class="input setting-input" name="{{self.display_name}}" id="{{self.display_name}}" value="{{ self.display_name }}" type="text" />
+                for="display_name">Display Name</label>
+            <input class="input setting-input" name="display_name" id="display_name" value="{{ self.display_name }}" type="text" />
         </div>
         <span class="tip setting-help">{{self.display_name.help}}</span>
         </li>
@@ -13,20 +13,22 @@
         <li class="field comp-setting-entry is-set">
         <div class="wrapper-comp-setting">
             <label class="label setting-label" 
-                for="{{self.height}}">Height</label>
-            <input class="input setting-input" name="{{self.height}}" id="{{self.height}}" value="{{ self.height }}" type="text" />
+                for="height">Height</label>
+            <input class="input setting-input" name="height" id="height" value="{{ self.height }}" type="text" />
         </div>
         <span class="tip setting-help">{{self.height.help}}</span>
         </li>
     </ul>
 <div id="prism_block">
     Code
-    <div class="editor" id="editor" value="{{self.height}}">
-        <pre><code class="language-{{ self.language }}">{{ self.code_data }}</code></pre>
+    <div class="html-editor editor">
+        <div class="row">
+            <textarea id="code-textarea">{{self.code_data}}</textarea>
+        </div>
     </div>
 
     Language 
-        <select id="{{self.language}}">
+        <select id="language">
         {% for lang in self.LANGUAGE_CHOICES %} 
             <option value="{{lang.value}}">
                 {{lang.display_name}}
@@ -35,7 +37,7 @@
         </select>
 
     Theme 
-        <select id="{{self.theme}}">
+        <select id="theme">
         {% for theme in self.THEME_CHOICES %} 
             <option value="{{theme.value}}">
                 {{theme.display_name}}
