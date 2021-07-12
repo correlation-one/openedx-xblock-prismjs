@@ -14,7 +14,7 @@ class PrismXBlock(XBlock):
     xblock_loader = ResourceLoader(__name__)
 
     display_name = String(
-        help="The display name for this component.",
+        help="The display name for this component",
         default="Syntax Highlighter",
         scope=Scope.settings
     )
@@ -30,9 +30,10 @@ class PrismXBlock(XBlock):
         {'display_name': 'javascript', 'value': 'javascript'},
     ]
 
-    #these are placeholders for now
+    LANGUAGE_HELP = "Select a programming language"
+
     language = String(
-        help="Language selector for code within editor",
+        help=LANGUAGE_HELP,
         default='python',
         values=LANGUAGE_CHOICES,
         scope=Scope.settings
@@ -42,9 +43,11 @@ class PrismXBlock(XBlock):
         {'display_name': 'light', 'value': 'light'},
         {'display_name': 'dark', 'value': 'dark'},
     ]
+
+    THEME_HELP = "Select a syntax highlighting theme"
     
     theme = String(
-        help="Theme selector to select prism theme",
+        help= THEME_HELP,
         default="dark",
         values=THEME_CHOICES,
         scope=Scope.settings

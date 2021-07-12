@@ -11,7 +11,7 @@
                     for="display_name">Display Name</label>
                 <input class="input setting-input" name="display_name" id="display_name" value="{{ self.display_name }}" type="text" />
             </div>
-        <!-- <span class="tip setting-help">{{ self.display_name.help}}</span> -->
+        
         </li>
         <li class="field comp-setting-entry is-set">
             <div class="wrapper-comp-setting">
@@ -33,6 +33,7 @@
                         </option>
                     {% endfor %}
                 </select>
+                <span class="tip setting-help">{{ self.LANGUAGE_HELP }}</span>
             </div>
         </li>
 
@@ -47,6 +48,7 @@
                         </option>
                     {% endfor %}
                 </select>
+                <span class="tip setting-help">{{ self.THEME_HELP }}</span>
             </div>
         </li>
 
@@ -59,35 +61,6 @@
         </li>
 
     </ul>
-
-
-
-
-<!-- <div id="prism_block">
-    Code
-    <div class="html-editor editor">
-        <div class="row">
-            <textarea id="code-textarea">{{self.code_data}}</textarea>
-        </div>
-    </div> -->
-<!-- 
-    Language 
-        <select id="language">
-        {% for lang in self.LANGUAGE_CHOICES %} 
-            <option value="{{lang.value}}">
-                {{lang.display_name}}
-            </option>
-        {% endfor %}
-        </select> -->
-
-    <!-- Theme 
-        <select id="theme">
-        {% for theme in self.THEME_CHOICES %} 
-            <option value="{{theme.value}}">
-                {{theme.display_name}}
-            </option>
-        {% endfor %}
-        </select> -->
 
     <div class="xblock-actions">
         <ul>

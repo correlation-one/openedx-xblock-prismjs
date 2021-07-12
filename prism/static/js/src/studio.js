@@ -23,9 +23,9 @@ function PrismXBlockEditBlock(runtime, element) {
             height: $(element).find('input[name=height]').val(),
 
         };
-        // runtime.notify('save', {state: 'start'});
+        runtime.notify('save', {state: 'start'});
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
-        // runtime.notify('save', {state: 'end'});
+        runtime.notify('save', {state: 'end'});
         });
     });
 
