@@ -17,7 +17,7 @@ docutils==0.15.2
 fs==2.4.11
 fs-s3fs==1.1.1
 idna==2.10
-Jinja2==2.11.2
+Jinja2==2.11.3
 jinja2-time==0.2.0
 jmespath==0.10.0
 lazy==1.4
