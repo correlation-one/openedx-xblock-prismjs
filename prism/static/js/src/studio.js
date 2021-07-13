@@ -18,7 +18,7 @@ function PrismXBlockEditBlock(runtime, element) {
         var data = {
             display_name: $(element).find('input[name=display_name]').val(),
             code_data: codeMirror.getValue(),
-            language: lngSelect.options[lngSelect.selectedIndex].text,
+            language: lngSelect.options[lngSelect.selectedIndex].value,
             theme: thmSelect.options[thmSelect.selectedIndex].text,
             height: $(element).find('input[name=height]').val(),
 
@@ -26,6 +26,7 @@ function PrismXBlockEditBlock(runtime, element) {
         runtime.notify('save', {state: 'start'});
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
         runtime.notify('save', {state: 'end'});
+        console.log(data)
         });
     });
 
