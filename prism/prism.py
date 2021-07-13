@@ -46,8 +46,8 @@ class PrismXBlock(XBlock):
     )
 
     THEME_CHOICES = [
-        {'display_name': 'light', 'value': 'light'},
-        {'display_name': 'dark', 'value': 'dark'},
+        {'display_name': 'Light', 'value': 'light'},
+        {'display_name': 'Dark', 'value': 'dark'},
     ]
 
     THEME_HELP = "Select a syntax highlighting theme"
@@ -117,7 +117,6 @@ class PrismXBlock(XBlock):
         self.language = data.get('language')
         self.theme = data.get('theme')
         self.height = data.get('height')
-        
         return {'result': 'success'}
 
     # TO-DO: change this to create the scenarios you'd like to see in the

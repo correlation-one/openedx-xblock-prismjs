@@ -19,14 +19,14 @@ function PrismXBlockEditBlock(runtime, element) {
             display_name: $(element).find('input[name=display_name]').val(),
             code_data: codeMirror.getValue(),
             language: lngSelect.options[lngSelect.selectedIndex].value,
-            theme: thmSelect.options[thmSelect.selectedIndex].text,
+            theme: thmSelect.options[thmSelect.selectedIndex].value,
             height: $(element).find('input[name=height]').val(),
 
         };
         runtime.notify('save', {state: 'start'});
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
         runtime.notify('save', {state: 'end'});
-        console.log(data)
+        // console.log(data)
         });
     });
 
