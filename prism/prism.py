@@ -26,8 +26,14 @@ class PrismXBlock(XBlock):
     )
 
     LANGUAGE_CHOICES = [
-        {'display_name': 'python', 'value': 'python'},
-        {'display_name': 'javascript', 'value': 'javascript'},
+        {'display_name': 'C-like', 'value': 'clike'},
+        {'display_name': 'CSS', 'value': 'css'},
+        {'display_name': 'Go', 'value': 'go'},
+        {'display_name': 'Java', 'value': 'java'},
+        {'display_name': 'Javascript', 'value': 'javascript'},
+        {'display_name': 'Python', 'value': 'python'},
+        {'display_name': 'Ruby', 'value': 'ruby'},
+        {'display_name': 'Shell-Session', 'value': 'shell-session'}
     ]
 
     LANGUAGE_HELP = "Select a programming language"
@@ -90,9 +96,14 @@ class PrismXBlock(XBlock):
             context={'self':self}
         ))
 
+        css_path  = "static/css/{}.css".format(self.theme)
+
         frag.add_css(self.resource_string("static/codemirror/codemirror.css"))
+        frag.add_css(self.resource_string(css_path))
+
         frag.add_javascript(self.resource_string("static/js/src/studio.js"))
         frag.add_javascript(self.resource_string("static/codemirror/codemirror.js"))
+        frag.add_javascript(self.resource_string("static/js/src/prism.js"))
         frag.initialize_js('PrismXBlockEditBlock')
         return frag
 
