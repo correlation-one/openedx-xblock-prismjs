@@ -20,7 +20,7 @@ function PrismXBlockEditBlock(runtime, element) {
             code_data: codeMirror.getValue(),
             language: lngSelect.options[lngSelect.selectedIndex].value,
             theme: thmSelect.options[thmSelect.selectedIndex].value,
-            height: $(element).find('input[name=height]').val(),
+            maxheight: $(element).find('input[name=maxheight]').val(),
 
         };
         runtime.notify('save', {state: 'start'});

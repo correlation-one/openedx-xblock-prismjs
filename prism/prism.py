@@ -24,11 +24,19 @@ class PrismXBlock(XBlock):
         default="print('hello world')",
         scope=Scope.content
     )
+    MAXHEIGHT_HELP = "Maximum height of code block (px)"
+
+    maxheight = Integer(
+        help=MAXHEIGHT_HELP,
+        default=450,
+        scope=Scope.settings
+    )
 
     LANGUAGE_CHOICES = [
         {'display_name': 'C-like', 'value': 'clike'},
         {'display_name': 'CSS', 'value': 'css'},
         {'display_name': 'Go', 'value': 'go'},
+        {'display_name': 'Markup', 'value': 'markup'},
         {'display_name': 'Java', 'value': 'java'},
         {'display_name': 'Javascript', 'value': 'javascript'},
         {'display_name': 'Python', 'value': 'python'},
@@ -59,11 +67,6 @@ class PrismXBlock(XBlock):
         scope=Scope.settings
     )
 
-    height = Integer(
-        help="Height of code editor (px)",
-        default=450,
-        scope=Scope.settings
-    )
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
@@ -82,6 +85,7 @@ class PrismXBlock(XBlock):
 
         css_path  = "static/css/{}.css".format(self.theme)
         frag.add_css(self.resource_string(css_path))
+        frag.add_css(self.resource_string("static/css/prism.css"))
         frag.add_javascript(self.resource_string("static/js/src/prism.js"))
         frag.initialize_js('PrismXBlock')
         return frag
@@ -116,7 +120,7 @@ class PrismXBlock(XBlock):
         self.code_data = data.get('code_data')
         self.language = data.get('language')
         self.theme = data.get('theme')
-        self.height = data.get('height')
+        self.maxheight = data.get('maxheight')
         return {'result': 'success'}
 
     # TO-DO: change this to create the scenarios you'd like to see in the
