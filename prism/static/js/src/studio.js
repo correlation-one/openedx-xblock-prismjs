@@ -24,9 +24,14 @@ function PrismXBlockEditBlock(runtime, element) {
 
         };
         runtime.notify('save', {state: 'start'});
-        $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
-        runtime.notify('save', {state: 'end'});
-        // console.log(data)
+
+        $.ajax({
+            url: handlerUrl,
+            type: 'POST',
+            data: JSON.stringify(data),
+        }).done(function(response) {
+            // runtime.notify('save', {state: 'end'});
+            window.location.reload();
         });
     });
 
