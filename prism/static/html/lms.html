@@ -2,14 +2,8 @@
     <div class="editor" id="editor">
   
         <div>
-            <!-- <pre class='command-line'><code class="language-shell-session">{{self.code_data}}</code></pre> -->
-        {% if self.language == "shell-session" %}
-            <pre class='command-line' style="max-height:{{self.maxheight}}px"><code class="language-shell-session">{{self.code_data}}</code></pre>
-        {% else %}
             <pre style="max-height:{{self.maxheight}}px"><code class="language-{{self.language}}" >{{self.code_data}}</code></pre>
-        {% endif %}
         </div>
 
     </div>
 </div>
-    <!-- class="language-{{self.language}}" -->

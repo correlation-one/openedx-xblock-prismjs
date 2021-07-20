@@ -30,7 +30,6 @@ function PrismXBlockEditBlock(runtime, element) {
             type: 'POST',
             data: JSON.stringify(data),
         }).done(function(response) {
-            // runtime.notify('save', {state: 'end'});
             window.location.reload();
         });
     });
