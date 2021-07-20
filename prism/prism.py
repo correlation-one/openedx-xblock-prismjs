@@ -33,15 +33,20 @@ class PrismXBlock(XBlock):
     )
 
     LANGUAGE_CHOICES = [
+        {'display_name': 'Bash', 'value': 'bash'},
         {'display_name': 'C-like', 'value': 'clike'},
         {'display_name': 'CSS', 'value': 'css'},
         {'display_name': 'Go', 'value': 'go'},
-        {'display_name': 'Markup', 'value': 'markup'},
         {'display_name': 'Java', 'value': 'java'},
         {'display_name': 'Javascript', 'value': 'javascript'},
+        {'display_name': 'JSON', 'value': 'json'},
+        {'display_name': 'Lua', 'value': 'lua'},
+        {'display_name': 'Markup', 'value': 'markup'},
         {'display_name': 'Python', 'value': 'python'},
         {'display_name': 'Ruby', 'value': 'ruby'},
-        {'display_name': 'Shell-Session', 'value': 'shell-session'}
+        {'display_name': 'Shell-Session', 'value': 'shell-session'},
+        {'display_name': 'SQL', 'value': 'sql'},
+        {'display_name': 'YAML', 'value': 'yaml'},
     ]
 
     LANGUAGE_HELP = "Select a programming language"
