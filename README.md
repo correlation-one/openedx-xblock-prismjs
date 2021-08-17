@@ -8,7 +8,7 @@ LMS Final Output Examples:
 ![Screenshot](docs/img/05finalJS.png)
 
 - Python in Dark theme
-![Screenshot](docs/img/05finalPY.png)
+![Screenshot](docs/img/06finalPY.png)
 
 # Installation
 This XBlock was tested & designed to work with Juniper release.
