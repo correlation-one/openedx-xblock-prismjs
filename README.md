@@ -1,6 +1,15 @@
 # xblock-prismjs
 XBlock for Syntax Highlighting with Prism.js
 
+
+LMS Final Output Examples:
+
+- Javascript in Light theme
+![Screenshot](docs/img/05finalJS.png)
+
+- Python in Dark theme
+![Screenshot](docs/img/05finalPY.png)
+
 # Installation
 This XBlock was tested & designed to work with Juniper release.
 
