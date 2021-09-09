@@ -1,7 +1,6 @@
 /* Javascript for PrismXBlock. */
 function PrismXBlock(runtime, element) {
 
-    console.log(runtime);
 
     var lngSelect = document.getElementById('language');
     var thmSelect = document.getElementById('theme');
