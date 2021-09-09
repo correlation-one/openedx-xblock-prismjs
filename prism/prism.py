@@ -92,7 +92,7 @@ class PrismXBlock(XBlock):
         frag.add_css(self.resource_string(css_path))
         frag.add_css(self.resource_string("static/css/prism.css"))
         frag.add_javascript(self.resource_string("static/js/src/prism.js"))
-        frag.initialize_js('PrismXBlock')
+        frag.initialize_js('RunPrism')
         return frag
 
     def studio_view(self, context=None):
@@ -113,7 +113,7 @@ class PrismXBlock(XBlock):
         frag.add_javascript(self.resource_string("static/js/src/studio.js"))
         frag.add_javascript(self.resource_string("static/codemirror/codemirror.js"))
         frag.add_javascript(self.resource_string("static/js/src/prism.js"))
-        frag.initialize_js('PrismXBlockEditBlock')
+        frag.initialize_js('PrismXBlock')
         return frag
 
     @XBlock.json_handler

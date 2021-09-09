@@ -1,6 +1,7 @@
 /* Javascript for PrismXBlock. */
-function PrismXBlockEditBlock(runtime, element) {
-    var $element = $(element);
+function PrismXBlock(runtime, element) {
+
+    console.log(runtime);
 
     var lngSelect = document.getElementById('language');
     var thmSelect = document.getElementById('theme');
