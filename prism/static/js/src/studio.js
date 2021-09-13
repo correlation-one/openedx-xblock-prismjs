@@ -2,8 +2,8 @@
 function PrismXBlock(runtime, element) {
 
 
-    var lngSelect = document.getElementById('language');
-    var thmSelect = document.getElementById('theme');
+    var lngSelect = $(element).find('#language');
+    var thmSelect = $(element).find('#theme');
 
     var codeMirror = CodeMirror.fromTextArea(document.querySelectorAll('textarea#code-textarea')[0], {
         lineNumbers: true,
