@@ -1,9 +1,9 @@
 /* Javascript for PrismXBlock. */
-function PrismXBlockEditBlock(runtime, element) {
-    var $element = $(element);
+function PrismXBlock(runtime, element) {
 
-    var lngSelect = document.getElementById('language');
-    var thmSelect = document.getElementById('theme');
+
+    var lngSelect = $(element).find('#language').get(0);
+    var thmSelect = $(element).find('#theme').get(0);
 
     var codeMirror = CodeMirror.fromTextArea(document.querySelectorAll('textarea#code-textarea')[0], {
         lineNumbers: true,
