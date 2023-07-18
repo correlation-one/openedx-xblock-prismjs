@@ -49,4 +49,4 @@ WebOb==1.8.6
 wrapt==1.11.2
 XBlock==1.3.1
 -e git+https://github.com/edx/xblock-sdk.git@8d3956c81f63d102e50d759feb47deff4ad814a4#egg=xblock_sdk
-xblock-utils==2.1.3
+xblock-utils==3.2.0
