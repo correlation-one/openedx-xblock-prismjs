@@ -34,6 +34,7 @@ class PrismXBlock(XBlock):
 
     LANGUAGE_CHOICES = [
         {'display_name': 'Bash', 'value': 'bash'},
+        {'display_name': 'Excel', 'value': 'excel-formula'},
         {'display_name': 'C-like', 'value': 'clike'},
         {'display_name': 'CSS', 'value': 'css'},
         {'display_name': 'Go', 'value': 'go'},
